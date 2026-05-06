@@ -1,0 +1,11 @@
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Exclude nested duplicate project copy
+/gymsite/

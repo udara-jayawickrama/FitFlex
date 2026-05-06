@@ -1,0 +1,99 @@
+.register-container {
+    width: 100%;
+    max-width: 680px;
+}
+
+.register-box {
+    margin: 20px 0;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.form-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(196, 30, 58, 0.3);
+    padding-bottom: 10px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+select {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(196, 30, 58, 0.3);
+    appearance: none;
+    cursor: pointer;
+}
+
+select option {
+    background: #1a1a1a;
+    color: white;
+}
+
+.terms-container {
+    margin: 20px 0;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.terms-checkbox a {
+    color: #c41e3a;
+    text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background: #c41e3a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.register-btn:hover {
+    background: #d4293f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.4);
+}
+
+@media (max-width: 768px) {
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+} 
