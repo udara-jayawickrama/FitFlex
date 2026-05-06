@@ -279,7 +279,7 @@ $conn->close();
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Gym Username (Unique)</label>
-                    <input type="text" name="gym_username" required pattern="[A-Za-z0-9_-]{3,20}" title="3-20 characters; letters, numbers, underscore or dash">
+                    <input type="text" name="gym_username" required title="Use letters, numbers, underscore or dash">
                 </div>
                 <div class="form-group">
                     <label>Gym Name</label>

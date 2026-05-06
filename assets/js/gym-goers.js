@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageModal = document.getElementById('messageModal');
     const allModals = [viewModal, editModal, messageModal];
 
+    // This file can be included on multiple pages; bail out when the member UI is absent.
+    if (!searchInput || !filterSelect) {
+        return;
+    }
+
     // Search functionality
     searchInput.addEventListener('input', (e) => {
         const searchTerm = e.target.value.toLowerCase();
@@ -120,15 +125,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Handle form submissions
-    document.querySelector('.edit-member-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        console.log('Saving member changes...');
-        closeAllModals();
-    });
+    const editForm = document.querySelector('.edit-member-form');
+    if (editForm) {
+        editForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Saving member changes...');
+            closeAllModals();
+        });
+    }
 
-    document.querySelector('.message-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        console.log('Sending message...');
-        closeAllModals();
-    });
+    const messageForm = document.querySelector('.message-form');
+    if (messageForm) {
+        messageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Sending message...');
+            closeAllModals();
+        });
+    }
 }); 
